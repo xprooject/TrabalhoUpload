@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        
+       
+        
+       <h:form>  
+        <p:fileUpload fileUploadListener="#{UploadMB.handleFileUpload}" mode="advanced" dragDropSupport="false"
+                  update="msg" sizeLimit="1000000000000" fileLimit="3" allowTypes="/(\.|\/)(txt|jpe?g|png)$/" />
+        
+        <p:growl id="messages" showDetail="true" /> 
+        
+        <strong> <p:outputLabel> Dados do Arquivo: </p:outputLabel> </strong>
+        <br></br>
+        
+        <p:inputTextarea id="msg" cols="147" rows="20" value="#{UploadMB.texto}">
+                
+        </p:inputTextarea>
+        
+</h:form>
+        
+        
+    </h:body>
+</html>
+
